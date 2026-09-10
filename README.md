@@ -98,6 +98,16 @@ et les trois reposent sur une ligne de base commune.
 pour chaque format. L'affiche Korité est un montage promotionnel, pas une prise
 de vue produit.
 
+## Autres visuels fournis par la marque
+
+| Fichier | Usage | Source |
+|---|---|---|
+| `bouteille-plage.jpg` | Nos formats, section « Le packaging » | `images/Bourteille plage.jpg`, recadré à partir de y=215 pour retirer le titre « La pureté à chaque instant », qui faisait doublon avec le titre de la section. Le badge « Origine Sénégal » et la signature de marque sont conservés. |
+
+Le fichier `images/350BOUTEILLENOUV.jpg` (233×350) est la même photo que
+`assets/img/geyser.jpg` (853×1280) : écart moyen de 2,2/255, soit du bruit de
+compression. C'est la version haute résolution qui est utilisée sur le site.
+
 ## Visuels issus d'Instagram
 
 Les images suivantes proviennent du compte officiel **@eaundindi** (récupérées le 2026-09-09) :
