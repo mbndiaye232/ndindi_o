@@ -138,6 +138,18 @@ chargées en `preload="metadata"`.
 Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
 elles sont déjà présentes à l'identique dans `assets/video/`.
 
+### Retrait de la série à pastille ronde
+
+Quatre visuels composés portaient une pastille ronde incrustée en haut à gauche,
+avec un rendu d'étiquette flou : `b1.jpg`, `b2.jpg`, `b3.jpg`,
+`fille-souriante.jpg` et `trois-bouteilles.jpg`. Tous ont été retirés du site et
+supprimés du dépôt.
+
+Conséquences : le bandeau de la médiathèque passe sur `bureau-ndindi.jpg`, celui
+de Nos formats sur `geyser.jpg`, et les `og:image` de ces deux pages sur
+`bouteille-plage.jpg`. Le filtre « Produit » de la galerie ne compte plus que
+deux images.
+
 ## Visuels issus d'Instagram
 
 Les images suivantes proviennent du compte officiel **@eaundindi** (récupérées le 2026-09-09) :
