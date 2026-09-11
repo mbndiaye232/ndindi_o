@@ -1,0 +1,27 @@
+# Redirection de l'ancien site WordPress vers le nouveau site
+# ------------------------------------------------------------
+# À renommer en « .htaccess » et à déposer à la racine de eaundindi.com.
+# Cette version est préférable au fichier index.html : elle renvoie un vrai
+# code 301, que les moteurs de recherche comprennent comme un déménagement
+# définitif et qui transfère le référencement acquis.
+#
+# ATTENTION : WordPress possède déjà un .htaccess à la racine. Ne le
+# remplacez pas, sauvegardez-le d'abord, puis collez le bloc ci-dessous
+# AVANT le bloc « # BEGIN WordPress ».
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Ne pas boucler si la requête vient déjà du nouveau domaine
+  RewriteCond %{HTTP_HOST} ^(www\.)?eaundindi\.com$ [NC]
+  RewriteRule ^(.*)$ https://ndindi-o.pages.dev/$1 [R=301,L]
+</IfModule>
+
+
+# Variante : rediriger uniquement la page d'accueil, et laisser le reste
+# de l'ancien site accessible. Remplacez le bloc ci-dessus par celui-ci.
+#
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteRule ^$ https://ndindi-o.pages.dev/ [R=301,L]
+# </IfModule>
