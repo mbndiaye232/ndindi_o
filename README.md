@@ -113,7 +113,10 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `magal-touba.jpg` | Accueil, grille « Moments de vie » | présentation modele moyen, recadré y 150–1450 pour écarter le filigrane TikTok et le bloc de contacts |
 | `fraicheur-duo.jpg` | Engagement, « Santé & hydratation » | Mame Diarra et cousine |
 | `format-10l-affiche.jpg` | Nos formats, section « Le 10 litres arrive » | grand format 10L5 1 |
-| `logo-ndindi.jpg` | En-tête et pied de page des 7 pages | logonouveau, goutte détourée du carton officiel |
+| `logo-ndindi.jpg` | En-tête, pied de page et icône des 7 pages | `images/New/LOGO250-150x150.jpg` |
+| `produit-350.png` | Carte 350 ml | `images/New/petit modele.png`, détouré |
+| `produit-15l.png` | Carte 1,5 L | `images/New/modele moyen.png`, détouré |
+| `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
 (ligne d'embouteillage), `table-mame-diarra.mp4` (poste de travail) et
@@ -130,11 +133,11 @@ chargées en `preload="metadata"`.
    `+221 76 766 55 28`. Seuls les deux numéros d'agents ont été transcrits en
    liens cliquables ; la ligne de contact générique du carton n'a pas été reprise
    en texte, pour ne pas contredire l'en-tête et le pied de page. À unifier.
-2. **Le logo du site est une image aplatie** découpée dans le carton officiel.
-   Un PNG transparent ou un SVG donnerait un rendu plus net, surtout sur mobile.
-   Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant Garamond,
-   alors que le logotype officiel utilise une linéale arrondie : à harmoniser si
-   la marque le souhaite.
+2. **Le logo sert aussi de favicon**, en 150×150 JPEG. Un PNG transparent ou un
+   SVG donnerait un rendu plus net, et 180×180 serait préférable pour l'icône
+   iOS. Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant
+   Garamond, alors que le logotype officiel utilise une linéale arrondie :
+   à harmoniser si la marque le souhaite.
 
 Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
 elles sont déjà présentes à l'identique dans `assets/video/`.
@@ -150,6 +153,20 @@ Conséquences : le bandeau de la médiathèque passe sur `bureau-ndindi.jpg`, ce
 de Nos formats sur `geyser.jpg`, et les `og:image` de ces deux pages sur
 `bouteille-plage.jpg`. Le filtre « Produit » de la galerie ne compte plus que
 deux images.
+
+### Slogan
+
+« Eau pure, goût parfait » remplace « Ndindi'O, le goût d'une vie » partout :
+sous le mot-vedette de l'en-tête des 7 pages, dans le titre de la page d'accueil,
+dans le pied de page et dans la méta description. La ligne de signature qui
+répétait l'ancien slogan sous le héros a été retirée.
+
+### Cartes de format
+
+Le 350 ml et le 1,5 L utilisent désormais des packshots **détourés** fournis par
+la marque : la bouteille flotte sur la carte, sans cadre. Le 10 L, faute de
+détourage disponible, garde sa vignette photo arrondie (classe
+`product__shot--photo`). Les hauteurs d'affichage restent 200 / 325 / 400 px.
 
 ## Visuels issus d'Instagram
 
