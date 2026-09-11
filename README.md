@@ -75,14 +75,19 @@ fournies par la marque, et non plus de découpes dans une affiche promotionnelle
 
 | Fichier | Format | Source | Découpe |
 |---|---|---|---|
-| `produit-350.jpg` | 350 ml | `images/New/2 formats, peties et moyen.jfif` | 468, 355, 665, 895 |
-| `produit-15l.jpg` | 1,5 L | `images/New/2 formats, peties et moyen.jfif` | 222, 50, 478, 945 |
+| `produit-350.jpg` | 350 ml | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 102, 436, 190, 698 |
+| `produit-15l.jpg` | 1,5 L | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 186, 310, 296, 698 |
 | `produit-10l.jpg` | 10 L | `images/New/grand format 10L5.jfif` | 175, 10, 615, 760 |
 
 La hauteur d'affichage de chaque vignette (`--shot-h` : 200 / 325 / 400 px)
 reproduit l'échelle réelle entre les formats, les trois reposant sur une ligne
-de base commune. Les 350 ml et 1,5 L partagent le même fond crème, le 10 L a un
-fond vert flouté : deux studios différents, mais deux fonds neutres.
+de base commune.
+
+Le 350 ml et le 1,5 L sont découpés dans la même photo de bureau : même fond
+olive, même table blanche, même éclairage, et surtout le rapport de taille réel
+entre les deux contenants. Les découpes font 88×262 et 110×388 pixels, donc
+réduites à l'affichage et jamais agrandies. Le 10 L garde son packshot sur fond
+vert flouté : c'est le seul dont on dispose.
 
 Les découpes précédentes, issues de l'affiche Korité, ont été remplacées, ainsi
 que `b2.jpg` (bouteille avec pastille ronde) et `pack-350.png`, retirés du site.
