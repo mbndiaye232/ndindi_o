@@ -68,35 +68,24 @@ du véhicule de livraison de la marque — à confirmer avant publication.
 Aucun chiffre non vérifié (capacité de production, effectifs, parts de marché,
 nombre de points de vente) n'a été publié.
 
-## Visuels produit — affiche Korité
+## Visuels produit — packshots officiels
 
-Les trois cartes de format (accueil + Nos formats) sont découpées dans **une seule
-et même affiche** fournie par la marque (`images/WhatsApp Image 2026-09-09 at 20.08.26.jpeg`,
-visuel Korité). C'est le seul document qui montre les trois contenants côte à côte.
+Les trois cartes de format viennent désormais de vraies prises de vue produit
+fournies par la marque, et non plus de découpes dans une affiche promotionnelle.
 
-| Fichier | Format | Découpe dans l'affiche (x0, y0, x1, y1) |
-|---|---|---|
-| `produit-350.jpg` | 350 ml | 145, 700, 292, 1200 |
-| `produit-15l.jpg` | 1,5 L | 540, 600, 750, 1195 |
-| `produit-10l.jpg` | 10 L | 232, 250, 552, 1185 |
+| Fichier | Format | Source | Découpe |
+|---|---|---|---|
+| `produit-350.jpg` | 350 ml | `images/New/2 formats, peties et moyen.jfif` | 468, 355, 665, 895 |
+| `produit-15l.jpg` | 1,5 L | `images/New/2 formats, peties et moyen.jfif` | 222, 50, 478, 945 |
+| `produit-10l.jpg` | 10 L | `images/New/grand format 10L5.jfif` | 175, 10, 615, 760 |
 
-Comme les trois découpes proviennent de la même prise de vue, elles partagent
-l'éclairage et le fond. La hauteur d'affichage de chaque vignette
-(`--shot-h` : 215 / 255 / 400 px) reproduit l'échelle réelle entre les formats,
-et les trois reposent sur une ligne de base commune.
+La hauteur d'affichage de chaque vignette (`--shot-h` : 200 / 325 / 400 px)
+reproduit l'échelle réelle entre les formats, les trois reposant sur une ligne
+de base commune. Les 350 ml et 1,5 L partagent le même fond crème, le 10 L a un
+fond vert flouté : deux studios différents, mais deux fonds neutres.
 
-**Deux retouches à connaître :**
-
-1. Le filigrane TikTok `@ndindi69` traversait la bande bleue de l'étiquette du
-   1,5 L. Cette bande a été reconstruite (zone x 628–746, y 922–960, remplie
-   ligne par ligne avec la couleur moyenne de la portion propre située à gauche).
-2. La découpe du 10 L laisse apparaître de fins fragments des deux autres
-   bouteilles sur ses bords bas : les contenants se chevauchent dans l'affiche,
-   un détourage parfait est impossible.
-
-**À fournir idéalement :** des photos packshot individuelles sur fond neutre
-pour chaque format. L'affiche Korité est un montage promotionnel, pas une prise
-de vue produit.
+Les découpes précédentes, issues de l'affiche Korité, ont été remplacées, ainsi
+que `b2.jpg` (bouteille avec pastille ronde) et `pack-350.png`, retirés du site.
 
 ## Autres visuels fournis par la marque
 
@@ -107,6 +96,42 @@ de vue produit.
 Le fichier `images/350BOUTEILLENOUV.jpg` (233×350) est la même photo que
 `assets/img/geyser.jpg` (853×1280) : écart moyen de 2,2/255, soit du bruit de
 compression. C'est la version haute résolution qui est utilisée sur le site.
+
+## Visuels et vidéos du 2026-09-11
+
+Nouveau lot fourni par la marque, rangé dans `images/New/`.
+
+| Fichier du site | Emplacement | Source |
+|---|---|---|
+| `bureau-ndindi.jpg` | Accueil, grille « Moments de vie » | Bureau fille 3 bouteilles |
+| `sport-duo.jpg` | Accueil, grille « Moments de vie » | Mame Diarra et cousine 1 |
+| `magal-touba.jpg` | Accueil, grille « Moments de vie » | présentation modele moyen, recadré y 150–1450 pour écarter le filigrane TikTok et le bloc de contacts |
+| `fraicheur-duo.jpg` | Engagement, « Santé & hydratation » | Mame Diarra et cousine |
+| `format-10l-affiche.jpg` | Nos formats, section « Le 10 litres arrive » | grand format 10L5 1 |
+| `logo-ndindi.jpg` | En-tête et pied de page des 7 pages | logonouveau, goutte détourée du carton officiel |
+
+Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
+(ligne d'embouteillage), `table-mame-diarra.mp4` (poste de travail) et
+`transport-ndindi.mp4` (chargement en camion). Toutes sont en format portrait,
+chargées en `preload="metadata"`.
+
+### Deux points en attente
+
+1. **`commerciaux.jfif` n'a pas été publié.** Ce carton d'agents commerciaux porte
+   des coordonnées qui contredisent celles du site : téléphone `+221 78 123 45 67`
+   (qui ressemble à un numéro de remplissage), e-mail `eau.ndindi@gmail.com` et
+   site `www.ndindi-eau.sn`. Le carton `logonouveau` donne encore d'autres valeurs :
+   `eaundindi@gmail.com` et le second numéro `+221 78 293 77 38`, là où le site
+   affiche `contact@eaundindi.com` et `+221 76 766 55 28`. À arbitrer avant de
+   toucher aux pages Contact et Distribution.
+2. **Le logo du site est une image aplatie** découpée dans le carton officiel.
+   Un PNG transparent ou un SVG donnerait un rendu plus net, surtout sur mobile.
+   Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant Garamond,
+   alors que le logotype officiel utilise une linéale arrondie : à harmoniser si
+   la marque le souhaite.
+
+Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
+elles sont déjà présentes à l'identique dans `assets/video/`.
 
 ## Visuels issus d'Instagram
 
