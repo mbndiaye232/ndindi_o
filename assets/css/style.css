@@ -570,12 +570,6 @@ p:last-child { margin-bottom: 0; }
   filter: drop-shadow(0 22px 26px rgba(4, 24, 42, .22));
   transition: transform .6s var(--ease);
 }
-/* Variante photo : contenant non détouré, présenté en vignette arrondie */
-.product__shot--photo img {
-  border-radius: 18px;
-  box-shadow: 0 22px 42px -20px rgba(4, 24, 42, .5);
-  filter: none;
-}
 .product:hover .product__shot img { transform: translateY(-8px) scale(1.04); }
 .product__vol {
   font-family: var(--display);

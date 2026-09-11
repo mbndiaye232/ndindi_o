@@ -116,6 +116,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `logo-ndindi.jpg` | En-tête, pied de page et icône des 7 pages | `images/New/LOGO250-150x150.jpg` |
 | `produit-350.png` | Carte 350 ml | `images/New/petit modele.png`, détouré |
 | `produit-15l.png` | Carte 1,5 L | `images/New/modele moyen.png`, détouré |
+| `produit-10l.png` | Carte 10 L | `images/New/grand modele.jfif`, fond blanc retiré |
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
@@ -163,10 +164,21 @@ répétait l'ancien slogan sous le héros a été retirée.
 
 ### Cartes de format
 
-Le 350 ml et le 1,5 L utilisent désormais des packshots **détourés** fournis par
-la marque : la bouteille flotte sur la carte, sans cadre. Le 10 L, faute de
-détourage disponible, garde sa vignette photo arrondie (classe
-`product__shot--photo`). Les hauteurs d'affichage restent 200 / 325 / 400 px.
+Les trois formats utilisent des packshots **détourés** : la bouteille flotte sur
+la carte, sans cadre ni fond, avec une simple ombre portée. Hauteurs d'affichage
+200 / 325 / 400 px, fidèles à l'échelle réelle entre les contenants, les trois
+reposant sur une ligne de base commune.
+
+Le 350 ml et le 1,5 L viennent de PNG déjà détourés. Le 10 L vient d'un JPEG sur
+fond blanc&nbsp;: le fond a été retiré par remplissage par diffusion depuis les
+bords, ce qui efface le blanc **relié au bord** sans toucher à l'intérieur de la
+bouteille, blanc lui aussi à plusieurs endroits. Un simple seuil de luminosité
+aurait percé l'étiquette et l'eau.
+
+Attention au recadrage&nbsp;: les deux PNG fournis contiennent un halo
+semi-transparent bien plus large que la bouteille. Un `getbbox()` naïfe garde ce
+halo et fait paraître la bouteille deux fois plus étroite qu'elle ne devrait dans
+son cadre. Le recadrage se fait sur les pixels d'alpha > 10.
 
 ## Visuels issus d'Instagram
 
