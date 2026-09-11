@@ -75,14 +75,19 @@ fournies par la marque, et non plus de découpes dans une affiche promotionnelle
 
 | Fichier | Format | Source | Découpe |
 |---|---|---|---|
-| `produit-350.jpg` | 350 ml | `images/New/2 formats, peties et moyen.jfif` | 468, 355, 665, 895 |
-| `produit-15l.jpg` | 1,5 L | `images/New/2 formats, peties et moyen.jfif` | 222, 50, 478, 945 |
+| `produit-350.jpg` | 350 ml | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 102, 436, 190, 698 |
+| `produit-15l.jpg` | 1,5 L | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 186, 310, 296, 698 |
 | `produit-10l.jpg` | 10 L | `images/New/grand format 10L5.jfif` | 175, 10, 615, 760 |
 
 La hauteur d'affichage de chaque vignette (`--shot-h` : 200 / 325 / 400 px)
 reproduit l'échelle réelle entre les formats, les trois reposant sur une ligne
-de base commune. Les 350 ml et 1,5 L partagent le même fond crème, le 10 L a un
-fond vert flouté : deux studios différents, mais deux fonds neutres.
+de base commune.
+
+Le 350 ml et le 1,5 L sont découpés dans la même photo de bureau : même fond
+olive, même table blanche, même éclairage, et surtout le rapport de taille réel
+entre les deux contenants. Les découpes font 88×262 et 110×388 pixels, donc
+réduites à l'affichage et jamais agrandies. Le 10 L garde son packshot sur fond
+vert flouté : c'est le seul dont on dispose.
 
 Les découpes précédentes, issues de l'affiche Korité, ont été remplacées, ainsi
 que `b2.jpg` (bouteille avec pastille ronde) et `pack-350.png`, retirés du site.
@@ -117,13 +122,14 @@ chargées en `preload="metadata"`.
 
 ### Deux points en attente
 
-1. **`commerciaux.jfif` n'a pas été publié.** Ce carton d'agents commerciaux porte
-   des coordonnées qui contredisent celles du site : téléphone `+221 78 123 45 67`
-   (qui ressemble à un numéro de remplissage), e-mail `eau.ndindi@gmail.com` et
-   site `www.ndindi-eau.sn`. Le carton `logonouveau` donne encore d'autres valeurs :
-   `eaundindi@gmail.com` et le second numéro `+221 78 293 77 38`, là où le site
-   affiche `contact@eaundindi.com` et `+221 76 766 55 28`. À arbitrer avant de
-   toucher aux pages Contact et Distribution.
+1. **Trois jeux de coordonnées coexistent.** Le carton `commerciaux.jfif` est
+   publié sur la page Distribution, section « Vos agents commerciaux », sur
+   décision de la marque. Il affiche `+221 78 123 45 67`, `eau.ndindi@gmail.com`
+   et `www.ndindi-eau.sn`. Le carton `logonouveau` donne `eaundindi@gmail.com` et
+   `+221 78 293 77 38`. Le site affiche, lui, `contact@eaundindi.com` et
+   `+221 76 766 55 28`. Seuls les deux numéros d'agents ont été transcrits en
+   liens cliquables ; la ligne de contact générique du carton n'a pas été reprise
+   en texte, pour ne pas contredire l'en-tête et le pied de page. À unifier.
 2. **Le logo du site est une image aplatie** découpée dans le carton officiel.
    Un PNG transparent ou un SVG donnerait un rendu plus net, surtout sur mobile.
    Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant Garamond,
@@ -132,6 +138,18 @@ chargées en `preload="metadata"`.
 
 Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
 elles sont déjà présentes à l'identique dans `assets/video/`.
+
+### Retrait de la série à pastille ronde
+
+Quatre visuels composés portaient une pastille ronde incrustée en haut à gauche,
+avec un rendu d'étiquette flou : `b1.jpg`, `b2.jpg`, `b3.jpg`,
+`fille-souriante.jpg` et `trois-bouteilles.jpg`. Tous ont été retirés du site et
+supprimés du dépôt.
+
+Conséquences : le bandeau de la médiathèque passe sur `bureau-ndindi.jpg`, celui
+de Nos formats sur `geyser.jpg`, et les `og:image` de ces deux pages sur
+`bouteille-plage.jpg`. Le filtre « Produit » de la galerie ne compte plus que
+deux images.
 
 ## Visuels issus d'Instagram
 
