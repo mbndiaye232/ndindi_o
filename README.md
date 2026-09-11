@@ -122,13 +122,14 @@ chargées en `preload="metadata"`.
 
 ### Deux points en attente
 
-1. **`commerciaux.jfif` n'a pas été publié.** Ce carton d'agents commerciaux porte
-   des coordonnées qui contredisent celles du site : téléphone `+221 78 123 45 67`
-   (qui ressemble à un numéro de remplissage), e-mail `eau.ndindi@gmail.com` et
-   site `www.ndindi-eau.sn`. Le carton `logonouveau` donne encore d'autres valeurs :
-   `eaundindi@gmail.com` et le second numéro `+221 78 293 77 38`, là où le site
-   affiche `contact@eaundindi.com` et `+221 76 766 55 28`. À arbitrer avant de
-   toucher aux pages Contact et Distribution.
+1. **Trois jeux de coordonnées coexistent.** Le carton `commerciaux.jfif` est
+   publié sur la page Distribution, section « Vos agents commerciaux », sur
+   décision de la marque. Il affiche `+221 78 123 45 67`, `eau.ndindi@gmail.com`
+   et `www.ndindi-eau.sn`. Le carton `logonouveau` donne `eaundindi@gmail.com` et
+   `+221 78 293 77 38`. Le site affiche, lui, `contact@eaundindi.com` et
+   `+221 76 766 55 28`. Seuls les deux numéros d'agents ont été transcrits en
+   liens cliquables ; la ligne de contact générique du carton n'a pas été reprise
+   en texte, pour ne pas contredire l'en-tête et le pied de page. À unifier.
 2. **Le logo du site est une image aplatie** découpée dans le carton officiel.
    Un PNG transparent ou un SVG donnerait un rendu plus net, surtout sur mobile.
    Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant Garamond,
