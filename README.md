@@ -68,29 +68,35 @@ du véhicule de livraison de la marque — à confirmer avant publication.
 Aucun chiffre non vérifié (capacité de production, effectifs, parts de marché,
 nombre de points de vente) n'a été publié.
 
-## Visuels produit — packshots officiels
+## Cartes de format — packshots détourés
 
-Les trois cartes de format viennent désormais de vraies prises de vue produit
-fournies par la marque, et non plus de découpes dans une affiche promotionnelle.
+Les trois cartes utilisent des packshots **détourés** fournis par la marque : la
+bouteille flotte sur la carte, sans cadre ni fond, avec une simple ombre portée.
 
-| Fichier | Format | Source | Découpe |
+| Fichier | Format | Source | Hauteur d'affichage |
 |---|---|---|---|
-| `produit-350.jpg` | 350 ml | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 102, 436, 190, 698 |
-| `produit-15l.jpg` | 1,5 L | `images/New/Bureau fille 3 bouteilles de Ndindi.jfif` | 186, 310, 296, 698 |
-| `produit-10l.jpg` | 10 L | `images/New/grand format 10L5.jfif` | 175, 10, 615, 760 |
+| `produit-350.png` | 350 ml | `images/New/petit modele.png` | 200 px |
+| `produit-15l.png` | 1,5 L | `images/New/modele moyen.png` | 325 px |
+| `produit-10l.png` | 10 L | `images/New/modele 10L.png` | 400 px |
 
-La hauteur d'affichage de chaque vignette (`--shot-h` : 200 / 325 / 400 px)
-reproduit l'échelle réelle entre les formats, les trois reposant sur une ligne
-de base commune.
+Les hauteurs reproduisent l'échelle réelle entre les contenants, les trois
+reposant sur une ligne de base commune.
 
-Le 350 ml et le 1,5 L sont découpés dans la même photo de bureau : même fond
-olive, même table blanche, même éclairage, et surtout le rapport de taille réel
-entre les deux contenants. Les découpes font 88×262 et 110×388 pixels, donc
-réduites à l'affichage et jamais agrandies. Le 10 L garde son packshot sur fond
-vert flouté : c'est le seul dont on dispose.
+**Deux pièges rencontrés, à connaître si vous refaites l'opération.**
 
-Les découpes précédentes, issues de l'affiche Korité, ont été remplacées, ainsi
-que `b2.jpg` (bouteille avec pastille ronde) et `pack-350.png`, retirés du site.
+Le 350 ml et le 1,5 L arrivent déjà détourés, mais leurs PNG contiennent un halo
+semi-transparent bien plus large que la bouteille. Un `getbbox()` naïf garde ce
+halo et fait paraître la bouteille deux fois plus étroite qu'elle ne devrait dans
+son cadre. Le recadrage se fait sur les pixels d'alpha > 10.
+
+Le 10 L arrive en PNG **sans canal alpha**, posé sur fond blanc. Le fond est
+retiré par remplissage par diffusion depuis les bords, ce qui efface le blanc
+*relié au bord* sans toucher à l'intérieur de la bouteille, blanc lui aussi à
+plusieurs endroits. Un simple seuil de luminosité aurait percé l'étiquette et
+l'eau.
+
+Les découpes précédentes, issues de l'affiche Korité puis de la photo de bureau,
+ont été remplacées. `b2.jpg` et `pack-350.png` ont été retirés du site.
 
 ## Autres visuels fournis par la marque
 
@@ -116,7 +122,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `logo-ndindi.jpg` | En-tête, pied de page et icône des 7 pages | `images/New/LOGO250-150x150.jpg` |
 | `produit-350.png` | Carte 350 ml | `images/New/petit modele.png`, détouré |
 | `produit-15l.png` | Carte 1,5 L | `images/New/modele moyen.png`, détouré |
-| `produit-10l.png` | Carte 10 L | `images/New/grand modele.jfif`, fond blanc retiré |
+| `produit-10l.png` | Carte 10 L | `images/New/modele 10L.png`, fond blanc retiré |
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
@@ -126,14 +132,17 @@ chargées en `preload="metadata"`.
 
 ### Deux points en attente
 
-1. **Trois jeux de coordonnées coexistent.** Le carton `commerciaux.jfif` est
-   publié sur la page Distribution, section « Vos agents commerciaux », sur
-   décision de la marque. Il affiche `+221 78 123 45 67`, `eau.ndindi@gmail.com`
-   et `www.ndindi-eau.sn`. Le carton `logonouveau` donne `eaundindi@gmail.com` et
-   `+221 78 293 77 38`. Le site affiche, lui, `contact@eaundindi.com` et
+1. **Coordonnées : l'e-mail est tranché, les numéros ne le sont pas.**
+   `eaundindi@gmail.com` est l'adresse retenue, appliquée partout : barre du
+   haut, pied de page, page Contact, et destination des deux formulaires
+   (`data-mailto`). L'ancienne `contact@eaundindi.com` n'apparaît plus nulle part.
+
+   Restent divergents : le carton `commerciaux.jfif`, publié sur la page
+   Distribution, affiche `+221 78 123 45 67` et le site `www.ndindi-eau.sn` ;
+   le carton `logonouveau` donne `+221 78 293 77 38` ; le site affiche
    `+221 76 766 55 28`. Seuls les deux numéros d'agents ont été transcrits en
-   liens cliquables ; la ligne de contact générique du carton n'a pas été reprise
-   en texte, pour ne pas contredire l'en-tête et le pied de page. À unifier.
+   liens cliquables, la ligne générique du carton reste visible dans l'image
+   uniquement. À unifier.
 2. **Le logo sert aussi de favicon**, en 150×150 JPEG. Un PNG transparent ou un
    SVG donnerait un rendu plus net, et 180×180 serait préférable pour l'icône
    iOS. Le mot-vedette « Ndindi'O » de l'en-tête reste composé en Cormorant
@@ -161,24 +170,6 @@ deux images.
 sous le mot-vedette de l'en-tête des 7 pages, dans le titre de la page d'accueil,
 dans le pied de page et dans la méta description. La ligne de signature qui
 répétait l'ancien slogan sous le héros a été retirée.
-
-### Cartes de format
-
-Les trois formats utilisent des packshots **détourés** : la bouteille flotte sur
-la carte, sans cadre ni fond, avec une simple ombre portée. Hauteurs d'affichage
-200 / 325 / 400 px, fidèles à l'échelle réelle entre les contenants, les trois
-reposant sur une ligne de base commune.
-
-Le 350 ml et le 1,5 L viennent de PNG déjà détourés. Le 10 L vient d'un JPEG sur
-fond blanc&nbsp;: le fond a été retiré par remplissage par diffusion depuis les
-bords, ce qui efface le blanc **relié au bord** sans toucher à l'intérieur de la
-bouteille, blanc lui aussi à plusieurs endroits. Un simple seuil de luminosité
-aurait percé l'étiquette et l'eau.
-
-Attention au recadrage&nbsp;: les deux PNG fournis contiennent un halo
-semi-transparent bien plus large que la bouteille. Un `getbbox()` naïfe garde ce
-halo et fait paraître la bouteille deux fois plus étroite qu'elle ne devrait dans
-son cadre. Le recadrage se fait sur les pixels d'alpha > 10.
 
 ## Visuels issus d'Instagram
 
@@ -213,7 +204,7 @@ nouveau packaging, soit assumer la cohabitation.
 
 Les deux formulaires (contact et partenariat) fonctionnent **sans backend** :
 ils ouvrent la messagerie du visiteur avec un message pré-rempli vers
-`contact@eaundindi.com` (attribut `data-mailto` sur la balise `<form>`).
+`eaundindi@gmail.com` (attribut `data-mailto` sur la balise `<form>`).
 
 Pour un envoi serveur (recommandé à terme), brancher un service type Formspree,
 Cloudflare Worker ou Web3Forms : il suffit de remplacer le gestionnaire `submit`
