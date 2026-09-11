@@ -77,7 +77,7 @@ bouteille flotte sur la carte, sans cadre ni fond, avec une simple ombre portée
 |---|---|---|---|
 | `produit-350.png` | 350 ml | `images/New/petit modele.png` | 200 px |
 | `produit-15l.png` | 1,5 L | `images/New/modele moyen.png` | 325 px |
-| `produit-10l.png` | 10 L | `images/New/modele 10L.png` | 400 px |
+| `produit-10l.png` | 10 L | `images/New/ndindi_eau_claire_transparent.png` | 400 px |
 
 Les hauteurs reproduisent l'échelle réelle entre les contenants, les trois
 reposant sur une ligne de base commune.
@@ -89,11 +89,11 @@ semi-transparent bien plus large que la bouteille. Un `getbbox()` naïf garde ce
 halo et fait paraître la bouteille deux fois plus étroite qu'elle ne devrait dans
 son cadre. Le recadrage se fait sur les pixels d'alpha > 10.
 
-Le 10 L arrive en PNG **sans canal alpha**, posé sur fond blanc. Le fond est
-retiré par remplissage par diffusion depuis les bords, ce qui efface le blanc
-*relié au bord* sans toucher à l'intérieur de la bouteille, blanc lui aussi à
-plusieurs endroits. Un simple seuil de luminosité aurait percé l'étiquette et
-l'eau.
+Le 10 L arrive détouré avec un vrai canal alpha, aucun traitement n'est
+nécessaire. Deux versions antérieures ont été écartées&nbsp;: `grand modele.jfif`
+et `modele 10L.png`, tous deux sur fond blanc opaque, dont le détourage laissait
+apparaître par transparence le décor vert de la prise de vue d'origine. L'eau du
+bidon y tirait sur le vert, en rupture avec les deux autres formats.
 
 Les découpes précédentes, issues de l'affiche Korité puis de la photo de bureau,
 ont été remplacées. `b2.jpg` et `pack-350.png` ont été retirés du site.
@@ -122,7 +122,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `logo-ndindi.jpg` | En-tête, pied de page et icône des 7 pages | `images/New/LOGO250-150x150.jpg` |
 | `produit-350.png` | Carte 350 ml | `images/New/petit modele.png`, détouré |
 | `produit-15l.png` | Carte 1,5 L | `images/New/modele moyen.png`, détouré |
-| `produit-10l.png` | Carte 10 L | `images/New/modele 10L.png`, fond blanc retiré |
+| `produit-10l.png` | Carte 10 L | `images/New/ndindi_eau_claire_transparent.png` |
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
