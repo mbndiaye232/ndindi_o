@@ -685,6 +685,28 @@ p:last-child { margin-bottom: 0; }
 }
 .gallery figure:hover figcaption { opacity: 1; transform: none; }
 
+/* Vidéos de la médiathèque */
+.video-item { margin: 0; }
+.video-item video {
+  width: 100%;
+  display: block;
+  background: #04182A;
+  border-radius: var(--r-m);
+  box-shadow: var(--sh-m);
+}
+.video-item figcaption {
+  margin-top: 16px;
+  font-size: .93rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+.video-item figcaption strong {
+  display: block;
+  font-size: 1.02rem;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
 .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
 .filter {
   padding: .68em 1.4em;
