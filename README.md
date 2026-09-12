@@ -129,6 +129,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 | `camion-livraison.jpg` | Distribution, bandeau de page | `images/New/camion livraison.png`, converti en JPEG (2,0 Mo → 334 Ko) |
 | `hero-formats.jpg` | Nos formats, bandeau de page | **composition**, voir ci-dessous |
+| `hero-production.jpg` | Notre eau, bandeau de page | `images/New/composite.png`, converti en JPEG (2,5 Mo → 401 Ko) |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
 (ligne d'embouteillage), `table-mame-diarra.mp4` (poste de travail) et
