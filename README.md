@@ -127,6 +127,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `produit-15l.png` | Carte 1,5 L | `images/New/modele moyen.png`, détouré |
 | `produit-10l.png` | Carte 10 L | `images/New/bouteille 10L OK.png`, détouré |
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
+| `camion-livraison.jpg` | Distribution, bandeau de page | `images/New/camion livraison.png`, converti en JPEG (2,0 Mo → 334 Ko) |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
 (ligne d'embouteillage), `table-mame-diarra.mp4` (poste de travail) et
@@ -154,6 +155,15 @@ chargées en `preload="metadata"`.
 
 Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
 elles sont déjà présentes à l'identique dans `assets/video/`.
+
+### Bandeaux de page chargés
+
+Le flanc de camion est un visuel entièrement lettré : logotype, slogan, noms
+des agents, coordonnées. Sous le voile standard des bandeaux, son texte
+concurrençait le titre de la page. La classe `pagehead--dense` renforce le
+dégradé (0,97 → 0,9 → 0,7 au lieu de 0,94 → 0,72 → 0,42) et ajoute un voile
+vertical, ce qui ramène le camion au rang de fond texturé tout en le laissant
+reconnaissable. À réutiliser pour tout visuel porteur de texte incrusté.
 
 ### Retrait de la série à pastille ronde
 
