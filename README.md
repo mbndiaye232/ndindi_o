@@ -128,6 +128,7 @@ Nouveau lot fourni par la marque, rangé dans `images/New/`.
 | `produit-10l.png` | Carte 10 L | `images/New/bouteille 10L OK.png`, détouré |
 | `agents-commerciaux.jpg` | Distribution, « Vos agents commerciaux » | commerciaux |
 | `camion-livraison.jpg` | Distribution, bandeau de page | `images/New/camion livraison.png`, converti en JPEG (2,0 Mo → 334 Ko) |
+| `hero-formats.jpg` | Nos formats, bandeau de page | **composition**, voir ci-dessous |
 
 Trois vidéos ont rejoint la médiathèque, dans `assets/video/` : `tapis-roulant.mp4`
 (ligne d'embouteillage), `table-mame-diarra.mp4` (poste de travail) et
@@ -155,6 +156,25 @@ chargées en `preload="metadata"`.
 
 Les vidéos sources de `images/New/Vidéos/` sont exclues du dépôt par `.gitignore` :
 elles sont déjà présentes à l'identique dans `assets/video/`.
+
+### Composition du bandeau Nos formats
+
+`hero-formats.jpg` (1920×640, 76 Ko) est généré, pas photographié. Le script
+`outils/compo-hero-formats.py` assemble les trois packshots détourés sur un fond
+dégradé avec halo, ombres au sol et ligne de base commune. Les hauteurs
+(235 / 382 / 470 px) reprennent le rapport 200 / 325 / 400 des cartes de format.
+
+La planche fournie `images/New/les3formats.jpg` montrait la disposition voulue
+mais ne faisait que 981×420, avec les bouteilles coupées en bas : l'étirer sur un
+bandeau pleine largeur l'aurait rendue floue. Les packshots détourés, disponibles
+en 900 px de haut, donnent le même résultat en net.
+
+**Zone sûre.** Un bandeau fait environ 1265×655 px, soit un rapport de 1,93 là où
+l'image en fait 3,0. En `object-fit: cover`, c'est donc la largeur qui est rognée,
+et il ne reste visible que la bande `x` 328–1592 de l'image. Le groupe de
+bouteilles est calé entre 1037 et 1520 pour rester entier. En dessous de 1100 px
+de large, la règle `.focus-right` décale le cadrage à 74 % pour ramener les
+bouteilles dans le champ.
 
 ### Bandeaux de page chargés
 
