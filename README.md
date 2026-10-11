@@ -49,6 +49,21 @@ Tous les textes de l'ancien site ont été repris **mot pour mot** puis enrichis
 (pages Notre eau, Nos formats, Engagement, Distribution, FAQ). Les coordonnées,
 dépôts et responsables sont ceux publiés sur la page Contact du site actuel.
 
+### ⚠️ La source est à Ndindi, pas à Touba Affè
+
+Le site WordPress d'origine attribuait la source à Touba Affè — « issue de la
+source naturelle immaculée située au cœur de la ville sainte de Touba Affè ».
+La marque a corrigé le 2026-10-11 : **la source est à Ndindi**, Touba Affè est le
+**siège de la société**. La refonte a donc repris puis corrigé une erreur héritée.
+
+24 passages ont été modifiés : titre et métadonnées de la page Notre eau, titre
+et accroche du héros de l'accueil, section « Pourquoi Ndindi », réponse de la FAQ,
+et les sept pieds de page.
+
+Restent inchangées, car exactes, les mentions de Touba Affè comme adresse : barre
+du haut, bloc adresse de la page Contact, dépôt « Touba — Siège » et raison
+sociale en pied de page.
+
 ### À compléter par Ndindi'O
 
 Ces éléments n'ont volontairement **pas** été inventés — ils doivent être fournis
