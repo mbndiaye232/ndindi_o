@@ -1,6 +1,6 @@
 # Site Ndindi'O — refonte
 
-Site vitrine statique pour **Ndindi'O**, eau minérale naturelle premium issue de la source de Touba Affè (Sénégal).
+Site vitrine statique pour **Ndindi'O**, eau minérale naturelle premium issue de la source de Ndindi (Sénégal), société basée à Touba Affè.
 
 Refonte du site WordPress existant (https://eaundindi.com) en HTML/CSS/JS statique :
 aucun build, aucune dépendance à installer, déployable tel quel.
@@ -22,7 +22,7 @@ aucun build, aucune dépendance à installer, déployable tel quel.
     ├── css/style.css     Système de design complet (tokens, composants, responsive)
     ├── js/main.js        Menu mobile, scroll reveal, compteurs, filtres, lightbox, formulaires
     ├── img/              Visuels récupérés depuis le site actuel
-    └── video/athlete.mp4
+    └── video/             tapis-roulant, table-mame-diarra, transport-ndindi (.mp4)
 ```
 
 ## Lancer en local
